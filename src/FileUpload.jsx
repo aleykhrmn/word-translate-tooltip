@@ -14,8 +14,22 @@ const FileUpload = ({ onFileLoaded }) => {
   };
 
   return (
-    <div>
-      <input type="file" accept=".txt" onChange={handleFileChange} />
+    <div style={{ backgroundColor: "#a9dbb7", padding: "20px", borderRadius: "8px" }}>
+      <input
+        type="file"
+        accept=".txt"
+        onChange={handleFileChange}
+        style={{
+          backgroundColor: "#a9dbb7",
+          padding: "10px 15px",
+          fontSize: "16px",
+          borderRadius: "5px",
+          border: "1px solid #ccc",
+          cursor: "pointer",
+          width: "90%",
+          maxWidth: "250px",
+        }}
+      />
     </div>
   );
 };

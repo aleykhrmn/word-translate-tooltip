@@ -37,7 +37,7 @@ const TextDisplay = ({ text }) => {
               style={{
                 position: "absolute",
                 top: "1.5em",
-                background: "#fff9c4",
+                background: "#dff5e5",
                 border: "1px solid #ccc",
                 padding: "6px 10px",
                 borderRadius: "6px",
