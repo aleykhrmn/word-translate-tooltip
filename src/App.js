@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import FileUpload from "./FileUpload";
+import TextDisplay from "./TextDisplay";
 
 function App() {
+  const [text, setText] = useState("");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ padding: "20px" }}>
+      <h2>📄 İngilizce Belge Üzerinden Türkçe Anlam Gösterimi</h2>
+      <FileUpload onFileLoaded={setText} />
+      {text && (
+        <div>
+          <h3>Metin:</h3>
+          <TextDisplay text={text} />
+        </div>
+      )}
     </div>
   );
 }
